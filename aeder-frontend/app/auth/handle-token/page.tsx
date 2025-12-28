@@ -16,9 +16,11 @@ export default function ClientAuthHandlerPage() {
 // Loading state component
 function AuthLoadingState() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-2xl font-semibold mb-4">Loading Authentication...</h1>
-      <div className="animate-pulse text-blue-500">Please wait...</div>
+    <div className="min-h-screen flex items-center justify-center bg-[#f5f5f5]">
+      <div className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8">
+        <h1 className="text-2xl font-black text-black mb-4">Loading...</h1>
+        <div className="w-8 h-8 border-4 border-black border-t-emerald-400 animate-spin"></div>
+      </div>
     </div>
   );
 }
@@ -131,20 +133,28 @@ function ClientAuthHandler() {
   }, [router, searchParams]);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-2xl font-semibold mb-4">Authentication</h1>
-      <p className="mb-4">{message}</p>
-      {isProcessing ? (
-        <div className="animate-pulse text-blue-500">Please wait...</div>
-      ) : (
-        <button
-          onClick={() => router.push("/signin")}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-        >
-          Return to Sign In
-        </button>
-      )}
+    <div className="min-h-screen flex items-center justify-center bg-[#f5f5f5] px-4">
+      <div className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 max-w-md w-full">
+        <h1 className="text-2xl font-black text-black mb-4 uppercase">
+          Authentication
+        </h1>
+        <div className="w-full h-1 bg-black mb-6"></div>
+        <p className="text-black font-medium mb-6">{message}</p>
+
+        {isProcessing ? (
+          <div className="flex items-center gap-3">
+            <div className="w-6 h-6 border-4 border-black border-t-emerald-400 animate-spin"></div>
+            <span className="font-bold text-black">Please wait...</span>
+          </div>
+        ) : (
+          <button
+            onClick={() => router.push("/signin")}
+            className="w-full bg-emerald-400 hover:bg-emerald-500 text-black font-bold py-3 px-4 border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+          >
+            Return to Sign In
+          </button>
+        )}
+      </div>
     </div>
   );
 }
-b;
