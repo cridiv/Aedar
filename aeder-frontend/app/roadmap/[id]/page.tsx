@@ -298,7 +298,7 @@ export default function RoadmapPage() {
             <div className="flex items-center gap-4">
               <Link
                 href="/chat"
-                className="p-2 bg-white border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                className="p-2 bg-white cursor-pointer text-black border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
               >
                 <ArrowLeft className="w-5 h-5" />
               </Link>
@@ -311,7 +311,7 @@ export default function RoadmapPage() {
                     <Calendar className="w-4 h-4" />
                     {formatDate(roadmap.created_at)}
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex cursor-pointer text-black items-center gap-1">
                     {roadmap.is_public ? (
                       <>
                         <Globe className="w-4 h-4 text-emerald-600" />
@@ -335,7 +335,7 @@ export default function RoadmapPage() {
               {/* Copy Link */}
               <button
                 onClick={handleCopyLink}
-                className="flex items-center gap-2 px-4 py-2 bg-white border-3 border-black font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                className="flex items-center cursor-pointer text-black gap-2 px-4 py-2 bg-white border-3 border-black font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
                 title="Copy link"
               >
                 {copied ? (
@@ -378,7 +378,7 @@ export default function RoadmapPage() {
                   {/* Delete */}
                   <button
                     onClick={() => setShowDeleteConfirm(true)}
-                    className="p-2 bg-red-100 border-3 border-black font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all hover:bg-red-200"
+                    className="p-2 cursor-pointer bg-red-100 border-3 border-black font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all hover:bg-red-200"
                     title="Delete roadmap"
                   >
                     <Trash2 className="w-4 h-4 text-red-600" />
