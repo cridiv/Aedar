@@ -219,7 +219,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
           </button>
           <button
             onClick={saveSettings}
-            className="btn cursor-not-allowed btn-disabled px-4 py-2 rounded-md  bg-sky-600/80 hover:bg-sky-600 text-white transition-colors"
+            className="cursor-not-allowed px-4 py-2 rounded-md bg-sky-600/80 hover:bg-sky-600 text-white transition-colors"
           >
             Save
           </button>

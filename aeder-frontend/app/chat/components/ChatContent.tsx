@@ -88,9 +88,8 @@ const ChatContent = () => {
       }
     });
 
-    setTimeout(() => {
-      handleAuth();
-    }, 100);
+    // Call handleAuth immediately after setting up the subscription
+    handleAuth();
 
     return () => subscription.unsubscribe();
   }, [supabase]);

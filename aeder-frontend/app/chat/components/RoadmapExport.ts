@@ -45,8 +45,8 @@ export const exportAsImage = async (
   try {
     onStatusChange?.("processing", "Creating image...");
 
-    // Wait for any pending renders/animations
-    await new Promise(resolve => setTimeout(resolve, 100));
+    // Wait for the next animation frame to ensure rendering is complete
+    await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
 
     // Ensure element is visible and has dimensions
     const rect = element.getBoundingClientRect();
@@ -121,8 +121,8 @@ export const exportAsPDF = async (
   try {
     onStatusChange?.("processing", "Creating PDF...");
 
-    // Wait for any pending renders/animations
-    await new Promise(resolve => setTimeout(resolve, 100));
+    // Wait for the next animation frame to ensure rendering is complete
+    await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
 
     // Ensure element is visible and has dimensions
     const rect = element.getBoundingClientRect();
