@@ -6,7 +6,7 @@ import {
   Brain,
   ArrowRight,
   CheckCircle,
-  Github,
+  GithubIcon,
   Twitter,
   Sparkles,
   Target,
@@ -23,10 +23,12 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-black">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-emerald-400 border-3 border-black flex items-center justify-center">
+            {/* <div className="w-10 h-10 bg-emerald-400 border-3 border-black flex items-center justify-center">
               <Rocket size={20} className="text-black" />
-            </div>
-            <span className="text-2xl font-black text-black">AEDER</span>
+            </div> */}
+            <span className="text-2xl font-black bg-linear-to-r from-emerald-500 to-black text-transparent bg-clip-text">
+              AEDER
+            </span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a
@@ -42,10 +44,10 @@ export default function Home() {
               How It Works
             </a>
             <a
-              href="#pricing"
+              href="#faqs"
               className="font-bold text-black hover:text-emerald-600 transition-colors"
             >
-              Pricing
+              FAQs
             </a>
           </div>
           <div className="flex items-center gap-3">
@@ -73,12 +75,12 @@ export default function Home() {
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-blue-400 border-4 border-black rotate-45 hidden lg:block" />
 
         <div className="max-w-5xl mx-auto text-center relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-300 border-3 border-black mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-300 border-3 border-black mb-6">
             <Sparkles size={16} className="text-black" />
-            <span className="font-bold text-sm">
+            <span className="font-bold text-black text-sm">
               AI-POWERED EXECUTION AGENT
             </span>
-          </div>
+          </div> */}
 
           <h1 className="text-5xl md:text-7xl font-black text-black leading-tight mb-6">
             Turn Ideas Into
@@ -105,7 +107,7 @@ export default function Home() {
             </Link>
             <a
               href="#how-it-works"
-              className="px-8 py-4 bg-white border-4 border-black font-black text-lg shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
+              className="px-8 py-4 bg-white border-4 text-black border-black font-black text-lg shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
             >
               See How It Works
             </a>
@@ -137,24 +139,24 @@ export default function Home() {
                       I&apos;ve created a 2-week roadmap with 4 phases:
                     </p>
                     <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-sm">
+                      <div className="flex items-center gap-2 text-sm text-black">
                         <CheckCircle size={16} className="text-emerald-600" />
-                        <span className="font-bold">Week 1:</span> Core auth &
+                        <span className="font-bold ">Week 1:</span> Core auth &
                         database setup
                       </div>
-                      <div className="flex items-center gap-2 text-sm">
+                      <div className="flex items-center gap-2 text-sm text-black">
                         <CheckCircle size={16} className="text-emerald-600" />
-                        <span className="font-bold">Week 1:</span> Project CRUD
+                        <span className="font-bold ">Week 1:</span> Project CRUD
                         & team features
                       </div>
-                      <div className="flex items-center gap-2 text-sm">
+                      <div className="flex items-center gap-2 text-sm text-black">
                         <CheckCircle size={16} className="text-emerald-600" />
-                        <span className="font-bold">Week 2:</span> Dashboard &
+                        <span className="font-bold ">Week 2:</span> Dashboard &
                         notifications
                       </div>
-                      <div className="flex items-center gap-2 text-sm">
+                      <div className="flex items-center gap-2 text-sm text-black">
                         <CheckCircle size={16} className="text-emerald-600" />
-                        <span className="font-bold">Week 2:</span> Testing &
+                        <span className="font-bold ">Week 2:</span> Testing &
                         deployment
                       </div>
                     </div>
@@ -163,7 +165,7 @@ export default function Home() {
                         <Calendar size={14} />
                         Add to Calendar
                       </button>
-                      <button className="px-3 py-1.5 bg-white border-2 border-black font-bold text-sm">
+                      <button className="px-3 py-1.5 bg-white border-2 text-black border-black font-bold text-sm">
                         Modify Plan
                       </button>
                     </div>
@@ -382,110 +384,12 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-400 border-3 border-black mb-4">
-              <Sparkles size={16} className="text-black" />
-              <span className="font-bold text-sm">PRICING</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-black/60 max-w-2xl mx-auto font-medium">
-              Start free, upgrade when you need more
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Free Plan */}
-            <div className="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-              <h3 className="text-2xl font-black text-black mb-2">Free</h3>
-              <p className="text-black/60 font-medium mb-6">
-                Perfect for trying out Aeder
-              </p>
-              <div className="text-5xl font-black text-black mb-6">
-                $0
-                <span className="text-xl font-bold text-black/50">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-emerald-600" />
-                  <span className="font-medium">5 roadmaps per month</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-emerald-600" />
-                  <span className="font-medium">Basic AI planning</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-emerald-600" />
-                  <span className="font-medium">Google Calendar sync</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-emerald-600" />
-                  <span className="font-medium">Session history</span>
-                </li>
-              </ul>
-              <Link
-                href="/signin"
-                className="block w-full py-3 bg-white border-3 border-black font-bold text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
-              >
-                Get Started Free
-              </Link>
-            </div>
-
-            {/* Pro Plan */}
-            <div className="bg-emerald-400 border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative">
-              <div className="absolute -top-4 right-4 px-4 py-1 bg-yellow-300 border-3 border-black font-bold text-sm">
-                POPULAR
-              </div>
-              <h3 className="text-2xl font-black text-black mb-2">Pro</h3>
-              <p className="text-black/70 font-medium mb-6">
-                For serious builders
-              </p>
-              <div className="text-5xl font-black text-black mb-6">
-                $19
-                <span className="text-xl font-bold text-black/50">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-black" />
-                  <span className="font-medium">Unlimited roadmaps</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-black" />
-                  <span className="font-medium">Advanced AI (GPT-4)</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-black" />
-                  <span className="font-medium">Priority scheduling</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-black" />
-                  <span className="font-medium">Team collaboration</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-black" />
-                  <span className="font-medium">Export roadmaps</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle size={20} className="text-black" />
-                  <span className="font-medium">Priority support</span>
-                </li>
-              </ul>
-              <Link
-                href="/signin"
-                className="block w-full py-3 bg-black border-3 border-black font-bold text-white text-center shadow-[4px_4px_0px_0px_rgba(255,255,255,0.5)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.5)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
-              >
-                Start Pro Trial
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
-      <section className="py-24 px-6 bg-yellow-300 border-y-4 border-black">
+      <section
+        id="faqs"
+        className="py-24 px-6 bg-yellow-300 border-y-4 border-black"
+      >
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black text-black text-center mb-12">
             Questions? Answers.
@@ -564,10 +468,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-emerald-400 border-3 border-black flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-emerald-400 border-3 border-black flex items-center justify-center">
                 <Rocket size={20} className="text-black" />
-              </div>
-              <span className="text-2xl font-black text-black">AEDER</span>
+              </div> */}
+              <span className="text-2xl font-black bg-linear-to-r from-emerald-500 to-black text-transparent bg-clip-text">
+                AEDER
+              </span>
             </div>
 
             <div className="flex items-center gap-8">
@@ -608,14 +514,14 @@ export default function Home() {
                 href="#"
                 className="w-10 h-10 bg-black border-3 border-black flex items-center justify-center hover:bg-emerald-400 transition-colors"
               >
-                <Github size={18} className="text-white hover:text-black" />
+                <GithubIcon size={18} className="text-white hover:text-black" />
               </a>
             </div>
           </div>
 
           <div className="mt-8 pt-8 border-t-2 border-black/10 text-center">
             <p className="text-black/50 font-medium">
-              © 2025 Aeder. Built with ❤️ for builders who ship.
+              © 2025 Aeder. Built with 💚 for builders who ship.
             </p>
           </div>
         </div>
