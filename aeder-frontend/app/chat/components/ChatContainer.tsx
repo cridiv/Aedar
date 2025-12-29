@@ -61,7 +61,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
       try {
         const res = await fetch(
           `${
-            process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+            process.env.NEXT_PUBLIC_API_URL || "https://aedar.onrender.com"
           }/user/profile?userId=${userId}`
         );
         if (res.ok) {
@@ -84,7 +84,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
       try {
         const res = await fetch(
           `${
-            process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+            process.env.NEXT_PUBLIC_API_URL || "https://aedar.onrender.com"
           }/roadmap/${roadmapId}?userId=${userId}`
         );
         if (res.ok) {

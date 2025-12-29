@@ -54,7 +54,8 @@ const Sidenav: React.FC<SidenavProps> = ({
         return;
       }
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      const apiUrl =
+        process.env.NEXT_PUBLIC_API_URL || "https://aedar.onrender.com";
       if (!apiUrl) {
         console.error("❌ Missing NEXT_PUBLIC_API_URL in .env.local");
         setIsLoading(false);

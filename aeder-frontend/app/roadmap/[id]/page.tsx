@@ -100,7 +100,7 @@ export default function RoadmapPage() {
 
       try {
         const baseUrl = `${
-          process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+          process.env.NEXT_PUBLIC_API_URL || "https://aedar.onrender.com"
         }/roadmap/${roadmapId}`;
         const url = userId ? `${baseUrl}?userId=${userId}` : baseUrl;
 
@@ -145,7 +145,7 @@ export default function RoadmapPage() {
     try {
       const res = await fetch(
         `${
-          process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+          process.env.NEXT_PUBLIC_API_URL || "https://aedar.onrender.com"
         }/roadmap/${roadmapId}/public`,
         {
           method: "PATCH",
@@ -174,7 +174,7 @@ export default function RoadmapPage() {
     try {
       const res = await fetch(
         `${
-          process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+          process.env.NEXT_PUBLIC_API_URL || "https://aedar.onrender.com"
         }/roadmap/${roadmapId}?userId=${userId}`,
         { method: "DELETE" }
       );
@@ -210,7 +210,7 @@ export default function RoadmapPage() {
     try {
       const res = await fetch(
         `${
-          process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+          process.env.NEXT_PUBLIC_API_URL || "https://aedar.onrender.com"
         }/mcp/calendar/execute`,
         {
           method: "POST",
