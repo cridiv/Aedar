@@ -153,5 +153,3 @@ aedar/
 MIT
 
 ---
-
-_Built for the Devpost AI Hackathon 2025_
