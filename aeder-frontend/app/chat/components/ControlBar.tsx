@@ -225,8 +225,10 @@ const ControlBar: React.FC<ControlBarProps> = ({
             {isCalendarConnected ? (
               <div className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 bg-emerald-100 border-2 sm:border-3 border-black font-bold text-xs sm:text-sm">
                 <div className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-500 rounded-full border-2 border-black" />
-                <CalendarCheck className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="hidden sm:inline">Connected</span>
+                <CalendarCheck className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-600" />
+                <span className="hidden sm:inline text-emerald-600">
+                  Connected
+                </span>
               </div>
             ) : (
               <button
